@@ -5,7 +5,7 @@
 #ifndef GEM5_CORE_H
 #define GEM5_CORE_H
 
-#include <stdint-gcc.h>
+#include <stdint.h>
 
 class Core
 {

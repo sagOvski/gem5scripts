@@ -6,7 +6,7 @@
 #define GEM5_THREAD_H
 
 
-#include <stdint-gcc.h>
+#include <stdint.h>
 
 class Thread
 {

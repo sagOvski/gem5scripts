@@ -25,7 +25,7 @@ std::string intToString(int num)
 
 int main(){
     std::cout<<"test"<<std::endl;
-    Pastry p(8);
+    Pastry p(8, 128);
     p.print_info();
 
 //    p.add_free_core(1234);
@@ -38,9 +38,9 @@ int main(){
         p.add_free_core(rand() % 128);
         p.add_thread(rand() % 1024 + 2048);
     }
-    
+
     p.print_info();
-    
+
 //    std::cout<<p.add_thread()<<std::endl;
 //    std::cout<<p.add_free_core()<<std::endl;
 //    std::cout<<p.map_threads_to_cores()<<std::endl;

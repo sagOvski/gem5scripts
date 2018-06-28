@@ -9,15 +9,19 @@ CoreSelectionPolicy::CoreSelectionPolicy()
 {
 }
 
-CoreSelectionPolicy::CoreSelectionPolicy(int ws)
+CoreSelectionPolicy::CoreSelectionPolicy(int ws, int cs)
 {
     set_window_size(ws);
-    window_size = ws;
+    set_sys_core_count(cs);
 }
 
 void CoreSelectionPolicy::set_window_size(int & ws)
 {
     window_size = ws;
+}
+
+void CoreSelectionPolicy::set_sys_core_count(int & cs) {
+  sys_core_count = cs;
 }
 
 void CoreSelectionPolicy::print_info()

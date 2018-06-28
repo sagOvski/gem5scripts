@@ -24,3 +24,15 @@ void CoreSelectionPolicy::print_info()
 {
     std::cout << " CoreSelectionPolicy: window_size " << window_size << std::endl;
 }
+
+std::string CoreSelectionPolicy::intToString(int num)
+{
+    std::string numAsStr;
+    while (num)
+    {
+        char toInsert = (num % 10) + 48;
+        numAsStr.insert(0, 1, toInsert);
+        num /= 10;
+    }
+    return numAsStr;
+}

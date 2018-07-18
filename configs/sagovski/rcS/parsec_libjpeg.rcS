@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+cd parsec && echo "changed directory to parsec/"
+source env.sh && echo "source'd env.sh"
+echo "building parsec.libjpeg!! " && parsecmgmt -a build -p libjpeg
+
+# Reset stats
+/sbin/m5 dumpresetstats
+echo "running parsec.libjpeg!! " && parsecmgmt -a run -p libjpeg -i simmedium
+echo "Finished running the benchmark"
+
+# Exit
+/sbin/m5 exit

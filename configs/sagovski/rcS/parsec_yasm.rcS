@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+cd parsec && echo "changed directory to parsec/"
+source env.sh && echo "source'd env.sh"
+echo "building parsec.yasm!! " && parsecmgmt -a build -p yasm
+
+# Reset stats
+/sbin/m5 dumpresetstats
+echo "running parsec.yasm!! " && parsecmgmt -a run -p yasm -i simmedium
+echo "Finished running the benchmark"
+
+# Exit
+/sbin/m5 exit
